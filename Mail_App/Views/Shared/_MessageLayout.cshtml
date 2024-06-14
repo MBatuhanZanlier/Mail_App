@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+@await Component.InvokeAsync("_MessageLayoutHead")
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+        <!-- Navbar -->
+        @await Component.InvokeAsync("_MessageLayoutNavbar")
+        <!-- /.navbar -->
+        <!-- Main Sidebar Container -->
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <section class="content-header">
+                <div class="container-fluid">
+                </div><!-- /.container-fluid -->
+            </section>
+
+            <!-- Main content -->
+            <section class="content">
+                <div class="row">
+                    @await Component.InvokeAsync("_MessageLayoutSidebar")
+
+                    <!-- /.col -->
+                    @RenderBody()
+                    <!-- /.col -->
+                </div>
+                <!-- /.row -->
+            </section>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+        @await Component.InvokeAsync("_MessageLayoutFooter")
+
+
+
+        <aside class="control-sidebar control-sidebar-dark">
+
+        </aside>
+     
+    </div>
+
+    @await Component.InvokeAsync("_MessageLayoutScript")
+
+
+</body>
+</html>
+
